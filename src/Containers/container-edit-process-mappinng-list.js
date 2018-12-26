@@ -84,7 +84,7 @@ class EditProcessList extends Component {
                         return map.processTemplateName === header ? (
                             <div key={key2}>
                                 <List component="nav">
-                                    <ListItem button style={{ marginTop: "-25px" }}>
+                                    <ListItem button style={{ marginTop: "-13px" }}>
                                         <ListItemText
                                             style={{ paddingLeft: "15px" }}
                                             primary={map.mappingName}
@@ -123,7 +123,7 @@ class EditProcessList extends Component {
             return <div></div>
         } else {
             return (
-                <div style={{ width: "98.5%", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ width: "98.5%", marginLeft: "auto", marginRight: "auto",marginTop: "2%" }}>
                     {this.renderPannel()}
                 </div>
             )

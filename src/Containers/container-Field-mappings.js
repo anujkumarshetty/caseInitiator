@@ -120,7 +120,7 @@ class DocClassToWorkField extends Component {
         console.log(JSON.stringify(this.props.submitData.data));
         fetch('http://localhost:3000/writeJson', {
             method: 'POST',
-            body: JSON.stringify(this.props.submitData.data),
+            body: JSON.stringify({ "data": this.props.submitData.data }),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -402,11 +402,11 @@ class DocClassToWorkField extends Component {
                     </ul>
                 </div>
                 <hr />
-                <div>
-                    <Button style={{ marginLeft: "47%", marginRight: "53%" }} variant="contained" color="primary" className={this.props.classes.button} onClick={() => this.saveProcess()}>
+                <div style={{marginLeft:"45%"}}>
+                    <Button variant="contained" color="primary" className={this.props.classes.button} onClick={() => this.saveProcess()}>
                         Save
                      </Button>
-                    <Button style={{ marginLeft: "47%", marginRight: "53%" }} variant="contained" color="secondary" className={this.props.classes.button} onClick={() => this.submitProcess()}>
+                    <Button variant="contained" color="secondary" className={this.props.classes.button} onClick={() => this.submitProcess()}>
                         Submit
                      </Button>
                 </div>
